@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# Run npm install for the host for docker-sync 
-npm install 
-
 # To run docker-sync go to the app directory
-cd docker-node-mongo/app 
+cd prototype/app 
+
+# Run npm install for the host for docker-sync
+npm install
 
 # Run docker-sync 
 docker-sync start 

@@ -3,4 +3,4 @@ options:
   verbose: true
 syncs:
   nodeServerSync:
-      src: './app/'
+      src: '.'

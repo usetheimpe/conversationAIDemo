@@ -2,14 +2,16 @@ version: "2.1"
 services:
   server:
     build: .
+    container_name: server
     ports:
       - "8080:3000"
     depends_on:
       db:
         condition: service_healthy
-      volumes:
-        - nodeServerSync:/server
+    volumes:
+      - nodeServerSync:/server
   db:
+    container_name: db
     image: mongo
     command: mongod --smallfiles
     volumes:

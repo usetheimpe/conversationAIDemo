@@ -1,5 +1,8 @@
 FROM node:alpine
 
+# install nodemon 
+RUN npm install -g nodemon
+
 # Create app directory
 RUN mkdir /server
 
@@ -15,3 +18,4 @@ RUN npm install
 COPY app /server
 
 CMD nodemon ./bin/www
+#CMD npm start
